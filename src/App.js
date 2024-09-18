@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -10,10 +10,10 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import AdopterForm from './pages/AdopterForm';
 import ShelterForm from './pages/ShelterForm';
-import PetCreateForm from './pages/PetCreateForm'; // Importa el nuevo formulario de creación de mascotas
-import PetEditForm from './pages/PetEditForm'; // Importa el nuevo formulario de edición de mascotas
-import { getJwt, switchRole } from './services/roleService'; // Importa las funciones necesarias
-import { fetchPetById, createPet } from './services/petService'; // Importa tu servicio para obtener y crear mascotas
+import PetCreateForm from './pages/PetCreateForm';
+import PetEditForm from './pages/PetEditForm';
+import { getJwt, switchRole } from './services/roleService';
+import { createPet } from './services/petService';
 import './index.css';
 import PetDetail from './pages/PetDetail';
 import UpdateShelterForm from './pages/UpdateShelterForm';

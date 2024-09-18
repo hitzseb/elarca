@@ -51,7 +51,7 @@ const EditAdopterForm = () => {
         setMessage(''); // Limpiar el mensaje de éxito antes de enviar
 
         try {
-            const updatedData = await updateAdopter(formData);
+            await updateAdopter(formData);
             setMessage('Datos actualizados exitosamente');
             navigate('/'); // Redirigir a la página principal
         } catch (error) {
