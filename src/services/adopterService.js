@@ -2,7 +2,7 @@
 export const createAdopter = async (adopterData) => {
   const jwt = localStorage.getItem('jwt'); // Obtener el JWT del almacenamiento local
   try {
-    const response = await fetch('http://localhost:8080/api/adopter/create', {
+    const response = await fetch('https://elarcaapi.onrender.com/api/adopter/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export const createAdopter = async (adopterData) => {
 export const getAdopter = async () => {
   const jwt = localStorage.getItem('jwt'); // Obtener el JWT del almacenamiento local
   try {
-    const response = await fetch('http://localhost:8080/api/adopter', {
+    const response = await fetch('https://elarcaapi.onrender.com/api/adopter', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${jwt}`, // Agregar el JWT en el header Authorization
@@ -50,7 +50,7 @@ export const getAdopter = async () => {
 export const updateAdopter = async (adopterData) => {
   const jwt = localStorage.getItem('jwt'); // Obtener el JWT del almacenamiento local
   try {
-    const response = await fetch('http://localhost:8080/api/adopter/update', {
+    const response = await fetch('https://elarcaapi.onrender.com/api/adopter/update', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

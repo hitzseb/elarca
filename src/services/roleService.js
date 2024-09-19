@@ -14,7 +14,7 @@ export const getJwt = () => {
 };
 
 export const switchRole = async (role) => {
-    const base_url = 'http://localhost:8080/api/role/switch/' + role;
+    const base_url = 'https://elarcaapi.onrender.com/api/role/switch/' + role;
     const jwt = localStorage.getItem('jwt'); // Obtener el JWT del almacenamiento local
     console.log('JWT usado:', jwt);
     console.log('URL usada:', base_url);

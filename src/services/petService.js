@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api/pets';
+const API_URL = 'https://elarcaapi.onrender.com/api/pets';
 
 // Obtener todas las mascotas
 export const fetchAllPets = async (token) => {

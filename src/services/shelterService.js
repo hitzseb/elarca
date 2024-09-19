@@ -2,7 +2,7 @@
 export const createShelter = async (shelterData) => {
   const jwt = localStorage.getItem('jwt'); // Obtener el JWT del almacenamiento local
   try {
-    const response = await fetch('http://localhost:8080/api/shelter/create', {
+    const response = await fetch('https://elarcaapi.onrender.com/api/shelter/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export const createShelter = async (shelterData) => {
 export const getMyShelter = async () => {
   const jwt = localStorage.getItem('jwt');
   try {
-    const response = await fetch('http://localhost:8080/api/shelter', {
+    const response = await fetch('https://elarcaapi.onrender.com/api/shelter', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${jwt}`,
@@ -50,7 +50,7 @@ export const getMyShelter = async () => {
 export const getAllShelters = async () => {
   const jwt = localStorage.getItem('jwt'); // Obtener el JWT del almacenamiento local
   try {
-    const response = await fetch('http://localhost:8080/api/shelter/all', {
+    const response = await fetch('https://elarcaapi.onrender.com/api/shelter/all', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${jwt}`, // Enviar el JWT en el header Authorization
@@ -73,7 +73,7 @@ export const getAllShelters = async () => {
 export const getShelterById = async (id) => {
   const jwt = localStorage.getItem('jwt'); // Obtener el JWT del almacenamiento local
   try {
-    const response = await fetch(`http://localhost:8080/api/shelter/${id}`, {
+    const response = await fetch(`https://elarcaapi.onrender.com/api/shelter/${id}`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${jwt}`, // Enviar el JWT en el header Authorization
@@ -97,7 +97,7 @@ export const getShelterById = async (id) => {
 export const updateShelter = async (shelterData) => {
   const jwt = localStorage.getItem('jwt');
   try {
-    const response = await fetch('http://localhost:8080/api/shelter/update', {
+    const response = await fetch('https://elarcaapi.onrender.com/api/shelter/update', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ export const updateShelter = async (shelterData) => {
 export const suspendShelter = async (id) => {
   const jwt = localStorage.getItem('jwt'); // Obtener el JWT del almacenamiento local
   try {
-    const response = await fetch(`http://localhost:8080/api/shelter/${id}/suspend`, {
+    const response = await fetch(`https://elarcaapi.onrender.com/api/shelter/${id}/suspend`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${jwt}`, // Enviar el JWT en el header Authorization
