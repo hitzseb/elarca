@@ -62,9 +62,9 @@ const MyShelter = () => {
                                     <div className="ml-6 w-2/3 space-y-5 p-4">
                                         <h2 className="text-xl font-semibold flex justify-between items-center">
                                             {shelter.shelterName}
-                                            <a href={`/my-shelter/update`} className="text-blue-500 text-base hover:underline">
+                                            {/* <a href={`/my-shelter/update`} className="text-blue-500 text-base hover:underline">
                                                 Editar
-                                            </a>
+                                            </a> */}
                                         </h2>
                                         <p className="text-gray-600">Address: {shelter.address}</p>
                                         <p className="text-gray-600">Contact: {shelter.contact}</p>

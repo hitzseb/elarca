@@ -36,7 +36,7 @@ const Navbar = ({ onRoleChange, activeRole }) => {
           <li>
             <Link to="/about" className="hover:text-gray-300">Acerca de</Link>
           </li>
-          
+
           {/* Mostrar según el rol */}
           {token && activeRole === 'ADOPTER' && (
             <>
@@ -54,10 +54,13 @@ const Navbar = ({ onRoleChange, activeRole }) => {
           {token && activeRole === 'SHELTER' && (
             <>
               <li>
-                <Link to="/my-shelter" className="hover:text-gray-300">Mi Refugio</Link>
+                <Link to="/my-shelter" className="hover:text-gray-300">Refugios</Link>
               </li>
               <li>
                 <Link to="/pets" className="hover:text-gray-300">Mis Mascotas</Link>
+              </li>
+              <li>
+                <Link to="/my-shelter/update" className="hover:text-gray-300">Mi refugio</Link>
               </li>
             </>
           )}
@@ -138,15 +141,21 @@ const Navbar = ({ onRoleChange, activeRole }) => {
                 <li>
                   <Link to="/pets" className="block text-white hover:text-gray-300">Mascotas</Link>
                 </li>
+                <li>
+                  <Link to="/adopter/update" className="hover:text-gray-300">Mis datos</Link>
+                </li>
               </>
             )}
             {token && activeRole === 'SHELTER' && (
               <>
                 <li>
-                  <Link to="/shelter/update" className="block text-white hover:text-gray-300">Mi Refugio</Link>
+                  <Link to="/my-shelter" className="hover:text-gray-300">Refugios</Link>
                 </li>
                 <li>
-                  <Link to="/pets" className="block text-white hover:text-gray-300">Mis Mascotas</Link>
+                  <Link to="/pets" className="hover:text-gray-300">Mis Mascotas</Link>
+                </li>
+                <li>
+                  <Link to="/my-shelter/update" className="hover:text-gray-300">Mi refugio</Link>
                 </li>
               </>
             )}
